@@ -1,0 +1,13 @@
+.usuario{
+color: rgb(151, 47, 151);
+}
+
+.inputs{
+    padding: 2px;
+    margin: 10px;
+}
+
+.registrarBtn{
+    font-size: medium;
+    padding: 5px;
+}

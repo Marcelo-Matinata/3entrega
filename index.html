@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Conversor de Monedas</title>
+</head>
+<body>
+    <div class="usuario" id="registroUsuario">
+        <h2>Registro de Usuario</h2>
+        <label for="nombre">Nombre:</label>
+        <input class="inputs" type="text" id="nombre" placeholder="Ingrese su Nombre">
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input class="inputs" type="text" id="apellido" placeholder="Ingrese su Apellido">
+        <br>
+        <label for="contrasena">Contraseña:</label>
+        <input class="inputs" type="password" id="contrasena" placeholder="Ingrese su Contraseña">
+        <br>
+        <label for="dinero">Dinero:</label>
+        <input class="inputs" type="number" id="dinero" placeholder="Ingrese cantidad de dinero a depositar">
+        <br>
+        <button class="registrarBtn" id="registrarBtn">Registrar</button>
+    </div>
+
+    <div class="usuario" id="conversionMoneda">
+        <h2>Conversor de Moneda</h2>
+        <label class="inputs" for="moneda">Seleccione una moneda a convertir:</label>
+        <select class="inputs" id="moneda">
+            <option value="dolar">Dólar</option>
+            <option value="euro">Euro</option>
+            <option value="real">Real</option>
+            <option value="yen">Yen</option>
+            <option value="libra">Libra</option>
+        </select>
+        <br>
+        <label class="inputs" for="monto">Monto:</label>
+        <input class="inputs" type="number" id="monto" placeholder="Ingrese el monto que desea convertir">
+        <br>
+        <button class="registrarBtn"  id="convertirBtn">Convertir</button>
+    </div>
+
+    <div id="resultado"></div>
+
+ <script src="./main.js"></script>
+</body>
+</html>
+
