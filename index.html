@@ -1,49 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Conversor de Monedas</title>
+    <title>Calculadora de Liquidacion Final</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    <div class="usuario" id="registroUsuario">
-        <h2>Registro de Usuario</h2>
-        <label for="nombre">Nombre:</label>
-        <input class="inputs" type="text" id="nombre" placeholder="Ingrese su Nombre">
-        <br>
-        <label for="apellido">Apellido:</label>
-        <input class="inputs" type="text" id="apellido" placeholder="Ingrese su Apellido">
-        <br>
-        <label for="contrasena">Contraseña:</label>
-        <input class="inputs" type="password" id="contrasena" placeholder="Ingrese su Contraseña">
-        <br>
-        <label for="dinero">Dinero:</label>
-        <input class="inputs" type="number" id="dinero" placeholder="Ingrese cantidad de dinero a depositar">
-        <br>
-        <button class="registrarBtn" id="registrarBtn">Registrar</button>
-    </div>
+    <header>
+        <div class='icono-menu'>
+            <img src="images/menugris.png" id='icono-menu' class='burger'>
+        </div>
+        <h2 class='marca'>Asesoramiento Monetario</h2>
+        
+        <div class='cont-menu active' id='menu'>
+            <ul>
+                <a href='#calculadora'>
+                    <li>Calculadora</li>
+                </a>
+                <a href="#escala">
+                    <li>Escala Comercio</li>
+                </a>
+                <a href="#nosotros">
+                    <li>Nosotros</li>
+                </a>
+                <a href="#contacto">
+                    <li>Contacto</li>
+                </a>
+            </ul>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <div class='titulo-principal'>
+            <h1>Información y asesoramiento en liquidación de sueldos y Cambio de divisas.</h1>
+        </div>
+        <div class='titulo-p'>
+            <p class='titulo' id="calculadora">Calculadora de indemnizaciones y liquidación final</p>
+        </div>
 
-    <div class="usuario" id="conversionMoneda">
-        <h2>Conversor de Moneda</h2>
-        <label class="inputs" for="moneda">Seleccione una moneda a convertir:</label>
-        <select class="inputs" id="moneda">
-            <option value="dolar">Dólar</option>
-            <option value="euro">Euro</option>
-            <option value="real">Real</option>
-            <option value="yen">Yen</option>
-            <option value="libra">Libra</option>
-        </select>
-        <br>
-        <label class="inputs" for="monto">Monto:</label>
-        <input class="inputs" type="number" id="monto" placeholder="Ingrese el monto que desea convertir">
-        <br>
-        <button class="registrarBtn"  id="convertirBtn">Convertir</button>
-    </div>
-
-    <div id="resultado"></div>
-
- <script src="./main.js"></script>
+        <section>
+            <div class='formFlex' id="nuevo">
+                <div class='form2' id='formulario'>
+                    <p class="titulo2">Ingrese sus datos</p><br>
+                    <label>Fecha de ingreso: <br><br>
+                        <input type="date" name="ingreso" id="ingreso" placeholder='AAAA-MM-DD'>
+                    </label><br><br>
+                    <label>Fecha de egreso: <br><br>
+                        <input type="date" name="egreso" id="egreso" placeholder='AAAA-MM-DD'>
+                    </label><br><br>
+                    <label>Sueldo bruto en $: <br><br>
+                        <input type="number" name="sueldo" id="sueldo">
+                    </label><br><br>
+                    <p class="tituloChico">Elija el tipo de liquidación</p><br>
+                    <label>Renuncia
+                        <input type="radio" name='tipo de liquidacion' value="Renuncia" id="renuncia">
+                    </label>
+                    <label>Despido
+                        <input type="radio" name='tipo de liquidacion' value="Despido" id="despido">
+                    </label><br><br>
+                    <button class="btn" id='boton'>Calcular</button>
+                </div>
+            </div>
+            <div id='volverCalcular'></div>
+        </section>
+        <section id='nosotros'>
+            <div class='about'>
+                <h3 id='about'>Simulador Interactivo</h3>
+                <p>Somos un Estudio situado en la Ciudad de Buenos Aires, dedicado a la Liquidacion de Sueldos y
+                    Administración de Personal</p>
+            </div>
+            <div id='mje'>
+                <div class='infoDiv'>
+                    <p class='info'>Si querés recibir más información, dejanos tu email y nos pondremos en contacto</p>
+                    <br>
+                    <form id="register">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" /><br><br>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" /><br><br>
+                        <input class='email' type="email" id='email' placeholder="name@mail.com"><br><br>
+                        <input type="submit" id='boton2' value="Enviar" />
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class='footer' id='contacto'>
+        <div class='footer-flex'>
+            <p>Sitio web creado por Matinata Karina</p>
+        </div>
+    </footer>
+    <div class="card-container" id="card"></div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="second.js"></script>
 </body>
-</html>
 
+</html>
