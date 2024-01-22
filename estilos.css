@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #8e838b;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255)
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: #f1faee;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+h3{
+    text-decoration: underline;
+    margin-bottom: 15px;    
+}
+
+option{
+    text-align: center;
+}
+
+.marca{
+    margin-left: 10px;
+    display: none;
+}
+
+.titulo-principal{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.icono-menu{
+   margin: 15px 10px; 
+   position: relative;
+   z-index: 10;
+}
+
+.icono-menu img{
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
+}
+
+.cont-menu{
+ /*    background-color: rgba(224, 15, 67, 0.952); */
+    border-radius: 0 0 30% 0;
+    width: 250px;
+    height: 100em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;   
+}
+
+.active{
+    transform: translate(-600px); 
+}
+
+
+.cruz{
+    content: url('images/cruz.png');  
+    margin: 5px 5px; 
+}
+
+.cont-menu ul{
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+}
+
+.cont-menu ul li{
+    color:white;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.cont-menu ul li:hover{
+    background-color: rgb(216, 208, 205);
+    border-radius: 0 0 150px 0;
+    color: rgb(22, 21, 21)
+}
+
+.titulo-p{
+    margin: 0 auto;
+    width: 700px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+    color: #f1faee;
+}
+
+.titulo2{
+    font-size: 20px;
+}
+
+.tituloChico{
+    font-size: 1.3em;
+}
+
+.formFlex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.form1{
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    background-color: rgba(46, 3, 15, 0.089);
+    width: 500px;
+    height: 350px;
+    margin-top: 20px;
+    border-radius: 15px 150px 15px 150px ;  
+    display: none;
+}
+
+.form2{
+    text-align: center;
+    color: rgb(6, 7, 8);
+    padding-bottom: 20px;
+    padding-top: 25px;
+    margin-bottom: 50px;
+    background-color: rgb(255, 245, 238);
+    width: 500px;
+    height: 25em;
+    margin-top: 20px;
+    border-radius: 15px 150px 15px 150px ;  
+}
+
+.btn{
+    border: 2px solid #1d3557;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+    color: #1d3557;
+    cursor: pointer;
+}
+
+#volverCalcular{
+    margin: 0 auto;
+    width: 200px;
+    align-items: center;
+}
+
+
+.ocultar{
+    display:none
+}
+
+.datos{
+    padding-top: 20px;
+}
+
+.escala{
+    height: 300px;
+}
+
+.input-size{
+    width: 10em;
+    text-align: center;
+}
+
+.about{
+    background-color: rgb(255, 245, 238);
+    height: 150px;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 30px;
+    color: slategray;
+}
+
+.infoDiv{
+    background-color: rgb(233, 226, 222);
+    height: 250px;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 30px;
+    color: rgb(6, 7, 8);
+}
+
+.info{
+    padding-top: 20px;
+}
+
+.email{
+    width: 250px;
+    text-align: center;
+}
+
+.mensaje{
+    margin: 0 auto;
+    background-color: #580be9;
+    color: white;
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    border: 2px solid rgb(255, 245, 238);
+    padding-top: 30px;
+    margin-bottom: 50px;
+    z-index: 999999999;
+}
+
+
+.btn3{
+    border: 2px solid #1d3557;
+    border-radius: 3rem;
+    padding: 0.1rem 0.5rem;
+    color: #1d3557;
+    cursor: pointer;
+    margin-top: 10px;  
+}
+
+#boton3:hover{
+    background-color: #1d3557;
+    color:silver;
+    border: 2px solid silver
+}
+
+#boton2:hover{
+    background-color: #1d3557;
+    color:silver;
+}
+
+#boton4:hover{
+    background-color: #1d3557;
+    color:silver;
+    border: 2px solid silver
+}
+
+.footer{
+    background-color: rgb(255, 245, 238);
+    height: 70px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+}
+
+.instagramImg{
+    height: 69px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 1.3em;
+    }
+
+    h2{
+        font-size: 1em;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    .about{
+        font-size: 1.2em;
+        padding: 20px;
+        height: 120px;
+    }
+    .infoDiv{
+        font-size: 1.2em;
+        padding: 20px;
+        height: 200px;
+    }
+
+    .titulo-principal{
+        width: 350px;   
+    }
+
+    .titulo-p{
+        margin: 0 auto;
+        width: 350px;
+    }
+
+    .titulo{
+        font-size: 1.1em;   
+    }
+
+    .tituloChico2{
+        font-size: 1em;
+    }
+
+    .form1, .form2{
+        width: 300px;
+        height: 24em;
+        border-radius: 15px 100px 15px 100px
+    }
+    
+    .titulo2, .tituloChico{
+        font-size: 1em;
+    }
+
+    .icono-menu img{
+        width: 25px;
+    }
+
+    .cont-menu{
+        width: 160px;
+        height: 19em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+    }
+
+    .cont-menu ul li{
+        font-size: 15px;
+    }
+    
+    .input-size{
+        width: 7em;
+    }
+
+}
